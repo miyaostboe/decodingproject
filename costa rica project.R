@@ -36,10 +36,3 @@ spanish2english <- function(spanish_phrase) {
 }
 
 spanish2english("Hola")
-
-
-# What if they want to translate a phrase you don't have?
-
-
-
-
