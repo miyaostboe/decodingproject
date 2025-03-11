@@ -18,6 +18,9 @@ translator_Sheet1[translator_Sheet1$Spanish == "Hola", "English"]
 # English to Spanish Translation
 english2spanish <- function(english_phrase) {
   result <- translator_Sheet1[translator_Sheet1$English == english_phrase, "Spanish"]
+  if (length(0)) {
+    return("Sorry, I cant translate that right now")
+  }
   return(result)
 }
 
@@ -26,6 +29,9 @@ english2spanish("why")
 # Spanish to English Translation
 spanish2english <- function(spanish_phrase) {
   result <- translator_Sheet1[translator_Sheet1$Spanish == spanish_phrase, "English"]
+  if (length(0)) {
+    return("Lo siento, no puedo traducirlo ahora mismo" )
+  }
   return(result)
 }
 
