@@ -8,17 +8,32 @@ View(translator_Sheet1)
 
 
 colnames(tourismcs)
-colnames("translator - Sheet1.csv")
-
-
-tourism_cs <- read.csv("tourismcs.csv")
-tourism_cs
-colnames(tourism_cs) <- c("year", "arrivals", "personal", "work", "expenditures",
-                          "number_of_establishments", "occupancy_rate",
-                          "avg_length_stay_nights")
-tourism_cs
-View(tourismcs)
 
 colnames(translator_Sheet1)
+
+
+translator_Sheet1[translator_Sheet1$English == "Hi", "Spanish"]
+translator_Sheet1[translator_Sheet1$Spanish == "Hola", "English"]
+
+# English to Spanish Translation
+english2spanish <- function(english_phrase) {
+  result <- translator_Sheet1[translator_Sheet1$English == english_phrase, "Spanish"]
+  return(result)
+}
+
+english2spanish("why")
+
+# Spanish to English Translation
+spanish2english <- function(spanish_phrase) {
+  result <- translator_Sheet1[translator_Sheet1$Spanish == spanish_phrase, "English"]
+  return(result)
+}
+
+spanish2english("Hola")
+
+
+# What if they want to translate a phrase you don't have?
+
+
 
 
